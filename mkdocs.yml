@@ -1,13 +1,11 @@
-site_name: Examark 使用说明书
+site_name: 用户手册
 site_description: Examark OCR/OMR 智能评卷平台的完整功能说明、使用指南和权限边界文档。
 site_url: https://docs.examark.net/
-repo_url: https://github.com/gu0y1/docs.examark.net
-repo_name: gu0y1/docs.examark.net
-edit_uri: edit/main/docs/
-copyright: Copyright &copy; 2026 Examark
+copyright: Copyright &copy; 2026 Examark. Powered by <a href="https://openmia.ai" target="_blank" rel="noopener">OpenMIA</a>
 
 theme:
   name: material
+  custom_dir: overrides
   language: zh
   logo: assets/examark.svg
   favicon: assets/examark.svg
@@ -55,7 +53,6 @@ nav:
   - 首页: index.md
   - 快速开始:
       - 系统概览: getting-started/overview.md
-      - 演示身份: getting-started/demo-identities.md
       - 界面与导航: getting-started/navigation.md
       - 完成第一场考试: getting-started/first-exam.md
   - 考试全流程:
