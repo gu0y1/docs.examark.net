@@ -26,9 +26,6 @@ theme:
 extra_css:
   - assets/stylesheets/extra.css
 
-extra_javascript:
-  - assets/javascripts/nav-active.js
-
 markdown_extensions:
   - admonition
   - attr_list
@@ -38,7 +35,11 @@ markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite

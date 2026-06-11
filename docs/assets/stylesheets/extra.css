@@ -107,6 +107,10 @@
   font-weight: 700;
 }
 
+.md-typeset .mermaid {
+  overflow-x: auto;
+}
+
 .md-typeset .grid.cards > ul > li {
   border-radius: 8px;
 }
