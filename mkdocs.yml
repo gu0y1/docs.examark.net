@@ -1,0 +1,93 @@
+site_name: Examark 使用说明书
+site_description: Examark OCR/OMR 智能评卷平台的完整功能说明、使用指南和权限边界文档。
+site_url: https://docs.examark.net/
+repo_url: https://github.com/gu0y1/docs.examark.net
+repo_name: gu0y1/docs.examark.net
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2026 Examark
+
+theme:
+  name: material
+  language: zh
+  logo: assets/examark.svg
+  favicon: assets/examark.svg
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: green
+      accent: green
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+nav:
+  - 首页: index.md
+  - 快速开始:
+      - 系统概览: getting-started/overview.md
+      - 演示身份: getting-started/demo-identities.md
+      - 界面与导航: getting-started/navigation.md
+      - 完成第一场考试: getting-started/first-exam.md
+  - 考试全流程:
+      - 流程总览: exam-workflow/overview.md
+      - 新建考试: exam-workflow/create-exam.md
+      - 配置考试协作: exam-workflow/collaboration.md
+      - 试题编写: exam-workflow/paper-authoring.md
+      - 预印与印刷数据: exam-workflow/preprint-printing.md
+      - 扫描上传: exam-workflow/scanning.md
+      - 客观复核与主观阅卷: exam-workflow/grading.md
+      - 成绩发布与报告: exam-workflow/scores-reports.md
+  - 功能手册:
+      - 考试管理: features/exam-management.md
+      - 试题配置: features/paper-editor.md
+      - 答题卡: features/answer-sheet.md
+      - 扫描识别: features/scanning-recognition.md
+      - 阅卷: features/grading.md
+      - 成绩与报告: features/scores-reports.md
+      - 学校主数据: features/master-data.md
+  - 权限与匿名化:
+      - 权限模型概览: permissions/overview.md
+      - 学校级角色与考试内角色: permissions/roles.md
+      - 匿名阅卷与身份字段: permissions/anonymity.md
+      - 文件、导出与 render-data 保护: permissions/file-protection.md
+  - 管理员指南:
+      - 学校基础数据: admin/master-data.md
+      - 教师、角色与绑定: admin/roles-teachers.md
+      - 学生与家长档案: admin/students-guardians.md
+      - 审计日志: admin/audit.md
+  - 运维与部署:
+      - 本地启动: deployment/local-dev.md
+      - 文档站发布: deployment/github-pages.md
+  - 常见问题: faq.md
+
