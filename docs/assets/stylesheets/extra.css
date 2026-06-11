@@ -63,7 +63,6 @@
     color 120ms ease;
 }
 
-.md-nav--primary .md-nav__item--active > .md-nav__link,
 .md-nav--primary .md-nav__link--active {
   border-left-color: var(--examark-brand);
   background-color: var(--examark-nav-active);
@@ -80,6 +79,10 @@
 .md-nav--secondary .md-nav__link--active,
 .md-nav--secondary .md-nav__link:hover {
   color: var(--examark-brand);
+}
+
+.md-sidebar--primary .md-sidebar__scrollwrap {
+  scroll-behavior: smooth;
 }
 
 .md-footer-meta {

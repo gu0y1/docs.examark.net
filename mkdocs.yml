@@ -1,5 +1,5 @@
 site_name: 用户手册
-site_description: Examark OCR/OMR 智能评卷平台的完整功能说明、使用指南和权限边界文档。
+site_description: Examark OCR/OMR 智能评卷平台的完整功能说明、使用指南和权限规则文档。
 site_url: https://docs.examark.net/
 copyright: Copyright &copy; 2026 Examark. Powered by <a href="https://openmia.ai" target="_blank" rel="noopener">OpenMIA</a>
 
@@ -25,6 +25,9 @@ theme:
 
 extra_css:
   - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/nav-active.js
 
 markdown_extensions:
   - admonition
@@ -82,7 +85,4 @@ nav:
       - 教师、角色与绑定: admin/roles-teachers.md
       - 学生与家长档案: admin/students-guardians.md
       - 审计日志: admin/audit.md
-  - 运维与部署:
-      - 本地启动: deployment/local-dev.md
-      - 文档站发布: deployment/github-pages.md
   - 常见问题: faq.md
