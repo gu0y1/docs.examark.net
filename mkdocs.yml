@@ -12,7 +12,6 @@ theme:
   logo: assets/examark.svg
   favicon: assets/examark.svg
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.top
@@ -23,8 +22,8 @@ theme:
     - content.code.copy
   palette:
     - scheme: default
-      primary: green
-      accent: green
+      primary: custom
+      accent: custom
 
 extra_css:
   - assets/stylesheets/extra.css
@@ -90,4 +89,3 @@ nav:
       - 本地启动: deployment/local-dev.md
       - 文档站发布: deployment/github-pages.md
   - 常见问题: faq.md
-

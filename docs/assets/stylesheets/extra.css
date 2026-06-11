@@ -1,10 +1,77 @@
 :root {
-  --md-primary-fg-color: #229d3a;
-  --md-accent-fg-color: #1f8a34;
+  --md-primary-fg-color: #202734;
+  --md-primary-fg-color--light: #2d3748;
+  --md-primary-fg-color--dark: #171d27;
+  --md-accent-fg-color: #229d3a;
+  --examark-sidebar: #202734;
+  --examark-sidebar-hover: #2d3748;
+  --examark-sidebar-text: #d6dce6;
+  --examark-brand: #229d3a;
+}
+
+.md-header {
+  background-color: var(--examark-sidebar);
+  box-shadow: 0 1px 0 rgba(17, 24, 39, 0.2);
+}
+
+.md-header__button.md-logo {
+  margin: 0.1rem 0.4rem 0.1rem 0;
+  padding: 0.18rem;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  display: block;
+  width: 8.75rem;
+  height: 2.45rem;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .md-header__title {
   font-weight: 700;
+  margin-left: 0.15rem;
+}
+
+.md-search__form {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.md-search__form:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.md-nav--primary .md-nav__title {
+  color: #111827;
+  font-weight: 700;
+}
+
+.md-nav--primary .md-nav__link {
+  border-radius: 0.35rem;
+  transition:
+    background-color 120ms ease,
+    color 120ms ease;
+}
+
+.md-nav--primary .md-nav__item--active > .md-nav__link,
+.md-nav--primary .md-nav__link--active {
+  background-color: var(--examark-sidebar-hover);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.md-nav--primary .md-nav__link:hover {
+  background-color: var(--examark-sidebar-hover);
+  color: #ffffff;
+}
+
+.md-nav--secondary .md-nav__link--active,
+.md-nav--secondary .md-nav__link:hover {
+  color: var(--examark-brand);
+}
+
+.md-tabs {
+  display: none;
 }
 
 .md-typeset h1,
@@ -15,4 +82,3 @@
 .md-typeset .grid.cards > ul > li {
   border-radius: 8px;
 }
-
