@@ -107,7 +107,7 @@
   font-weight: 700;
 }
 
-.md-content .md-typeset a:not(.headerlink):not(.md-button):not(.footnote-ref):not(.footnote-backref) {
+.md-content .md-typeset p > a:not(.headerlink):not(.md-button):not(.footnote-ref):not(.footnote-backref) {
   color: #116b27;
   font-weight: 700;
   text-decoration-line: underline;
@@ -122,7 +122,7 @@
   border-radius: 2px;
 }
 
-.md-content .md-typeset a:not(.headerlink):not(.md-button):not(.footnote-ref):not(.footnote-backref):hover {
+.md-content .md-typeset p > a:not(.headerlink):not(.md-button):not(.footnote-ref):not(.footnote-backref):hover {
   color: #0f5f22;
   background:
     linear-gradient(
