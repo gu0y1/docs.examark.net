@@ -1,5 +1,5 @@
 site_name: 用户手册
-site_description: Examark 面向学校真实考试流程的操作手册、角色指南和部署文档。
+site_description: Examark 面向学校真实考试流程的操作手册、角色指南和截图补充清单。
 site_url: https://docs.examark.net/
 copyright: Copyright &copy; 2026 Examark. Powered by <a href="https://openmia.ai" target="_blank" rel="noopener">OpenMIA</a>
 
@@ -81,7 +81,7 @@ nav:
       - 学校级角色与考试内角色: permissions/roles.md
       - 匿名阅卷与身份字段: permissions/anonymity.md
       - 常见权限场景: permissions/scenarios.md
-      - 文件、导出与 render-data 保护: permissions/file-protection.md
+      - 文件与导出保护: permissions/file-protection.md
   - 管理员指南:
       - 学校基础数据: admin/master-data.md
       - 教师、角色与绑定: admin/roles-teachers.md
@@ -91,7 +91,4 @@ nav:
       - 普通用户 FAQ: faq/index.md
       - 故障处理: faq/troubleshooting.md
       - 权限问题: faq/permissions.md
-  - 技术与部署:
-      - 技术文档说明: technical/index.md
-      - 截图补充清单: technical/screenshots.md
-      - Linux 部署与排错: technical/deployment.md
+  - 截图补充清单: screenshots/index.md
