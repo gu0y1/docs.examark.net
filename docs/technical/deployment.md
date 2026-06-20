@@ -43,6 +43,41 @@ curl -fsS http://127.0.0.1:8000/health
 curl -I https://app.examark.net
 ```
 
+## Nginx 与 Certbot 检查
+
+常见检查命令：
+
+```bash
+nginx -t
+systemctl is-active nginx
+certbot certificates
+systemctl list-timers | grep certbot
+```
+
+排查顺序：
+
+1. DNS 是否指向当前服务器。
+2. 80/443 端口是否开放。
+3. Nginx 站点配置是否启用。
+4. 反向代理目标服务是否 active。
+5. 证书是否覆盖当前域名。
+6. 自动续期 timer 是否存在。
+
+## 多组织入口检查
+
+业务入口采用：
+
+```text
+/org/{orgSlug}/grading
+```
+
+运维检查时，应分别确认：
+
+- 根路径能进入组织选择或组织卡片页面。
+- 本地组织能进入 `/org/{orgSlug}/login`。
+- 外部组织会跳转到外部登录地址。
+- 旧入口只用于提示，不作为推荐入口。
+
 ## 中文字体与 PDF 渲染
 
 如果 PDF 中中文显示为空白或方框，先检查 Linux 上是否安装中文字体：
@@ -53,33 +88,43 @@ fc-list :lang=zh family file
 
 推荐安装 Noto CJK 字体。PDF 渲染依赖 Chromium 或 Playwright 可用浏览器；如果系统没有 Chromium，需要安装或配置可用浏览器路径。
 
-## 组织入口
+## 数据库与 storage 备份
 
-学校用户业务入口使用：
-
-```text
-/org/{orgSlug}/grading
-```
-
-示例：
-
-```text
-/org/demoSchool/grading
-```
-
-旧入口只用于提示用户切换到组织入口，不应作为教程里的推荐入口。
-
-## 备份建议
-
-运维人员应定期备份：
+备份至少覆盖：
 
 - master 数据库。
-- tenant 数据库。
-- tenant storage。
-- Nginx 与 systemd 配置。
+- tenant 数据库目录。
+- tenant storage 目录。
+- Nginx 配置。
+- systemd 服务文件。
 - 环境变量配置文件。
 
-备份恢复前，应先停止相关服务并确认目标路径。
+建议策略：
+
+| 对象 | 建议频率 | 说明 |
+| --- | --- | --- |
+| master 数据库 | 每日 | 保存组织目录、平台设置和审计 |
+| tenant 数据库 | 每日或考试前后 | 保存学校业务数据 |
+| tenant storage | 每日或考试前后 | 保存上传文件、PDF、扫描和裁剪产物 |
+| 配置文件 | 每次变更后 | 便于恢复服务 |
+
+恢复前应先停止相关服务，确认目标路径，再恢复数据库和 storage。
+
+## GitHub Pages 文档站发布
+
+文档站由 GitHub Pages workflow 发布。推荐流程：
+
+```bash
+mkdocs build --strict
+git status --short
+git add -A
+git commit -m "Update docs"
+git push origin main
+```
+
+`main` 分支 push 后会触发 Pages workflow。部署完成后，访问 `https://docs.examark.net/` 验证首页是否更新。
+
+如果文档中新增截图，先确认图片文件已提交，并执行 `mkdocs build --strict` 检查图片引用。
 
 ## 常见技术排错
 

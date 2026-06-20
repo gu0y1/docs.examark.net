@@ -93,4 +93,5 @@ nav:
       - 权限问题: faq/permissions.md
   - 技术与部署:
       - 技术文档说明: technical/index.md
+      - 截图补充清单: technical/screenshots.md
       - Linux 部署与排错: technical/deployment.md
