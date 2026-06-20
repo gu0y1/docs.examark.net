@@ -1,5 +1,5 @@
 site_name: 用户手册
-site_description: Examark OCR/OMR 智能评卷平台的完整功能说明、使用指南和权限规则文档。
+site_description: Examark 面向学校真实考试流程的操作手册、角色指南和部署文档。
 site_url: https://docs.examark.net/
 copyright: Copyright &copy; 2026 Examark. Powered by <a href="https://openmia.ai" target="_blank" rel="noopener">OpenMIA</a>
 
@@ -56,7 +56,8 @@ plugins:
 nav:
   - 首页: index.md
   - 快速开始:
-      - 系统概览: getting-started/overview.md
+      - Examark 是什么: getting-started/overview.md
+      - 登录与组织入口: getting-started/login-org.md
       - 界面与导航: getting-started/navigation.md
       - 完成第一场考试: getting-started/first-exam.md
   - 考试全流程:
@@ -68,22 +69,28 @@ nav:
       - 扫描上传: exam-workflow/scanning.md
       - 客观复核与主观阅卷: exam-workflow/grading.md
       - 成绩发布与报告: exam-workflow/scores-reports.md
-  - 功能手册:
-      - 考试管理: features/exam-management.md
-      - 试题配置: features/paper-editor.md
-      - 答题卡: features/answer-sheet.md
-      - 扫描识别: features/scanning-recognition.md
-      - 阅卷: features/grading.md
-      - 成绩与报告: features/scores-reports.md
-      - 学校主数据: features/master-data.md
+  - 角色操作手册:
+      - 考试创建人手册: roles/exam-owner.md
+      - 试题编写人手册: roles/paper-author.md
+      - 扫描人员手册: roles/scanner.md
+      - 阅卷教师手册: roles/grader.md
+  - 扫描与印刷规范:
+      - 扫描与识别 SOP: scanning-printing/sop.md
   - 权限与匿名化:
       - 权限模型概览: permissions/overview.md
       - 学校级角色与考试内角色: permissions/roles.md
       - 匿名阅卷与身份字段: permissions/anonymity.md
+      - 常见权限场景: permissions/scenarios.md
       - 文件、导出与 render-data 保护: permissions/file-protection.md
   - 管理员指南:
       - 学校基础数据: admin/master-data.md
       - 教师、角色与绑定: admin/roles-teachers.md
       - 学生与家长档案: admin/students-guardians.md
       - 审计日志: admin/audit.md
-  - 常见问题: faq.md
+  - 常见问题:
+      - 普通用户 FAQ: faq/index.md
+      - 故障处理: faq/troubleshooting.md
+      - 权限问题: faq/permissions.md
+  - 技术与部署:
+      - 技术文档说明: technical/index.md
+      - Linux 部署与排错: technical/deployment.md
