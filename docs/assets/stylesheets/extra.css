@@ -107,6 +107,39 @@
   font-weight: 700;
 }
 
+.md-content .md-typeset a:not(.headerlink):not(.md-button):not(.footnote-ref):not(.footnote-backref) {
+  color: #116b27;
+  font-weight: 700;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+  background:
+    linear-gradient(
+      to top,
+      rgba(34, 157, 58, 0.16) 0 42%,
+      transparent 42% 100%
+    );
+  border-radius: 2px;
+}
+
+.md-content .md-typeset a:not(.headerlink):not(.md-button):not(.footnote-ref):not(.footnote-backref):hover {
+  color: #0f5f22;
+  background:
+    linear-gradient(
+      to top,
+      rgba(34, 157, 58, 0.26) 0 58%,
+      transparent 58% 100%
+    );
+}
+
+.md-typeset .tabbed-set {
+  margin-top: 1rem;
+}
+
+.md-typeset .tabbed-labels > label {
+  font-weight: 700;
+}
+
 .md-typeset .mermaid {
   overflow-x: auto;
 }

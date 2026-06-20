@@ -9,104 +9,106 @@
 
 如果你是第一次使用，建议先阅读 [完成第一场考试](getting-started/first-exam.md)。这是一套从 0 到成绩发布的完整示例教程。
 
-## 我是学校管理员 / 教务人员
+## 按身份查找任务
 
-你负责让学校数据先准备好，让后续考试能够顺利创建、扫描、阅卷和发布成绩。
+=== "学校管理员 / 教务"
 
-常见任务：
+    你负责让学校数据先准备好，让后续考试能够顺利创建、扫描、阅卷和发布成绩。
 
-- 初始化学年、学期、年级、班级、科目。
-- 维护学生、教师和家长档案。
-- 配置教师角色、任课关系、班主任关系和管理权限。
-- 查看审计日志，追踪关键操作。
+    常见任务：
 
-推荐入口：
+    - 初始化学年、学期、年级、班级、科目。
+    - 维护学生、教师和家长档案。
+    - 配置教师角色、任课关系、班主任关系和管理权限。
+    - 查看审计日志，追踪关键操作。
 
-- [学校基础数据](admin/master-data.md)
-- [教师、角色与绑定](admin/roles-teachers.md)
-- [学生与家长档案](admin/students-guardians.md)
-- [权限模型概览](permissions/overview.md)
+    推荐入口：
 
-## 我是考试创建人 / 考官
+    - [学校基础数据](admin/master-data.md)
+    - [教师、角色与绑定](admin/roles-teachers.md)
+    - [学生与家长档案](admin/students-guardians.md)
+    - [权限模型概览](permissions/overview.md)
 
-你负责组织一场考试，让试题、班级、协作人员、扫描、阅卷和成绩发布串起来。
+=== "考试创建人 / 考官"
 
-常见任务：
+    你负责组织一场考试，让试题、班级、协作人员、扫描、阅卷和成绩发布串起来。
 
-- 新建考试并选择学年、学期、年级和科目。
-- 配置考试班级和考试协作人员。
-- 检查试题、答题卡、扫描状态、阅卷进度和成绩状态。
-- 发布成绩并导出结果。
+    常见任务：
 
-推荐入口：
+    - 新建考试并选择学年、学期、年级和科目。
+    - 配置考试班级和考试协作人员。
+    - 检查试题、答题卡、扫描状态、阅卷进度和成绩状态。
+    - 发布成绩并导出结果。
 
-- [考试创建人手册](roles/exam-owner.md)
-- [新建考试](exam-workflow/create-exam.md)
-- [配置考试协作](exam-workflow/collaboration.md)
-- [成绩发布与报告](exam-workflow/scores-reports.md)
+    推荐入口：
 
-## 我是试题编写人
+    - [考试创建人手册](roles/exam-owner.md)
+    - [新建考试](exam-workflow/create-exam.md)
+    - [配置考试协作](exam-workflow/collaboration.md)
+    - [成绩发布与报告](exam-workflow/scores-reports.md)
 
-你负责把试卷内容准备好，并确认答题卡可以被正确打印和扫描。
+=== "试题编写人"
 
-常见任务：
+    你负责把试卷内容准备好，并确认答题卡可以被正确打印和扫描。
 
-- 编写选择题、填空题和主观题。
-- 设置分值、答案、评分标准和试卷信息。
-- 预览试卷与答题卡。
-- 进入预印，确认纸张、单双面和空白页策略。
+    常见任务：
 
-推荐入口：
+    - 编写选择题、填空题和主观题。
+    - 设置分值、答案、评分标准和试卷信息。
+    - 预览试卷与答题卡。
+    - 进入预印，确认纸张、单双面和空白页策略。
 
-- [试题编写人手册](roles/paper-author.md)
-- [试题编写](exam-workflow/paper-authoring.md)
-- [预印与印刷数据](exam-workflow/preprint-printing.md)
+    推荐入口：
 
-## 我是扫描人员
+    - [试题编写人手册](roles/paper-author.md)
+    - [试题编写](exam-workflow/paper-authoring.md)
+    - [预印与印刷数据](exam-workflow/preprint-printing.md)
 
-你负责把纸质答题卡上传到系统，并处理识别异常或学生绑定问题。
+=== "扫描人员"
 
-常见任务：
+    你负责把纸质答题卡上传到系统，并处理识别异常或学生绑定问题。
 
-- 上传扫描 PDF、JPG 或 PNG。
-- 检查扫描批次、录入结果和答题卡统计。
-- 处理条码识别失败、学号绑定失败、缺页或模糊。
-- 确认可交付阅卷的答题卡。
+    常见任务：
 
-推荐入口：
+    - 上传扫描 PDF、JPG 或 PNG。
+    - 检查扫描批次、录入结果和答题卡统计。
+    - 处理条码识别失败、学号绑定失败、缺页或模糊。
+    - 确认可交付阅卷的答题卡。
 
-- [扫描人员手册](roles/scanner.md)
-- [扫描上传](exam-workflow/scanning.md)
-- [扫描与识别 SOP](scanning-printing/sop.md)
-- [故障处理](faq/troubleshooting.md)
+    推荐入口：
 
-## 我是阅卷教师
+    - [扫描人员手册](roles/scanner.md)
+    - [扫描上传](exam-workflow/scanning.md)
+    - [扫描与识别 SOP](scanning-printing/sop.md)
+    - [故障处理](faq/troubleshooting.md)
 
-你负责复核客观题异常，或为系统分配给你的填空题、主观题录入分数和评语。
+=== "阅卷教师"
 
-常见任务：
+    你负责复核客观题异常，或为系统分配给你的填空题、主观题录入分数和评语。
 
-- 进入客观复核，处理空白、多选、低置信度等结果。
-- 进入主观阅卷，按评分标准录入分数。
-- 检查自己的任务是否已经提交。
-- 理解为什么阅卷时默认看不到学生姓名和班级。
+    常见任务：
 
-推荐入口：
+    - 进入客观复核，处理空白、多选、低置信度等结果。
+    - 进入主观阅卷，按评分标准录入分数。
+    - 检查自己的任务是否已经提交。
+    - 理解为什么阅卷时默认看不到学生姓名和班级。
 
-- [阅卷教师手册](roles/grader.md)
-- [客观复核与主观阅卷](exam-workflow/grading.md)
-- [匿名阅卷与身份字段](permissions/anonymity.md)
-- [权限问题](faq/permissions.md)
+    推荐入口：
 
-## 我是学校管理者
+    - [阅卷教师手册](roles/grader.md)
+    - [客观复核与主观阅卷](exam-workflow/grading.md)
+    - [匿名阅卷与身份字段](permissions/anonymity.md)
+    - [权限问题](faq/permissions.md)
 
-你通常不负责每天录入数据，但需要了解考试进度、成绩发布、班级表现和权限边界。
+=== "学校管理者"
 
-推荐入口：
+    你通常不负责每天录入数据，但需要了解考试进度、成绩发布、班级表现和权限边界。
 
-- [考试流程总览](exam-workflow/overview.md)
-- [成绩发布与报告](exam-workflow/scores-reports.md)
-- [常见权限场景](permissions/scenarios.md)
+    推荐入口：
+
+    - [考试流程总览](exam-workflow/overview.md)
+    - [成绩发布与报告](exam-workflow/scores-reports.md)
+    - [常见权限场景](permissions/scenarios.md)
 
 !!! info "当前版本状态"
     当前版本重点支持考试创建、试题配置、答题卡生成、扫描上传、人工复核、主观阅卷、成绩发布和基础报告查看。更完整的家长端报告、自动化分析和批量推送能力以后续版本为准。
